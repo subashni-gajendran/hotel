@@ -19,7 +19,7 @@
    <div ng-controller="samplecontoller" ng-init="searchRestaurant('se19')">
    	<div class="row">
    	 	<div>
-    		<p class="well"><span class="glyphicon glyphicon-search"></span> Search the restaurantant details to enter the Pincode.</p>
+    		<h1 class="well"><span class="glyphicon glyphicon-search"></span> Search the restaurantant details to enter the Pincode.</h1>
     			<form  ng-submit="searchRestaurant(enterPincode)" name="myForm">
     				<div class="form-group">
     					<div class="col-xs-2">	
@@ -74,10 +74,12 @@
  			</li>
 		</ul>
 	</div>
+  <div>Some sample PostCode:PL20, UB3, SA1, EX14, TS17, TN17, GU14, NR12, GU10, SN15, EX32 etc</div> 
 </div>
+<div class="col-xs-12" style="padding-top: 100px;">
  <div class="alert alert-info" ng-show="datalists.length==0">
     No Restaurant details found in entered the postcode!
 </div>
-  <div>Some sample PostCode:PL20, UB3, SA1, EX14, TS17, TN17, GU14, NR12, GU10, SN15, EX32 etc</div>  
+</div>
 </body>
 </html>
