@@ -1,7 +1,6 @@
 var app = angular.module("sampleapp", []);
 app.controller('samplecontoller', ['$scope', '$http', function ($scope, $http) { 
   $scope.searchRestaurant = function(value) {
-  $scope.datalists = '';
   $http.defaults.headers.common['Accept-Tenant'] ='uk';
   $http.defaults.headers.common['Accept-Language'] ='en-GB';
   $http.defaults.headers.common.Authorization ='Basic VGVjaFRlc3RBUEk6dXNlcjI=';
@@ -11,9 +10,6 @@ app.controller('samplecontoller', ['$scope', '$http', function ($scope, $http) {
         $scope.curPage = 0;
         $scope.pageSize = 5;
         $scope.datalists = response.data.Restaurants;
-
-      //console.log($scope.datalists.length);
-
         $scope.numberOfPages = function() {
         return Math.ceil($scope.datalists.length / $scope.pageSize);
       }
